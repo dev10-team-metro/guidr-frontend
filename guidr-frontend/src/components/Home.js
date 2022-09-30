@@ -1,4 +1,5 @@
 import "../css/Home.css"
+import { Link } from "react-router-dom"
 
 function Home() {
     return (
@@ -6,8 +7,8 @@ function Home() {
             <div className="container">
                 <div className="uk-background-cover">
                     <div className="center">
-                        <h1>Tour the world from the comfort of your home</h1>
-                        <a className="uk-button uk-button-default" href="../src/components/Collections">Get Started</a>
+                        <h1 className="hometext">Tour the world from the comfort of your home</h1>
+                        <Link className="uk-button uk-button-default homebutton" to="/Collections">Get Started</Link>
                     </div>
                 </div>
             </div>
