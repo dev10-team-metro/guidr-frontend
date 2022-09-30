@@ -1,30 +1,73 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
 import Collections from "./components/Collections";
 import Home from "./components/Home";
 import Landmarks from "./components/Landmarks";
+import Register from './components/Forms/Register';
+import NavBar from './components/NavBar';
+import Login from './components/Forms/Login';
+import DisplayMap from './components/Map';
+import AuthContext from './AuthContext';
 
 function App() {
+	const [user, setUser] = useState(null);
+
+	const login = (token) => {
+		const decodedToken = jwt_decode(token);
+
+		const roles = decodedToken.authorities.split(',');
+
+		const userToLogin = {
+			username: decodedToken.sub,
+			roles,
+			token,
+			hasRole(role) {
+				return this.roles.includes(role);
+			},
+		};
+		setUser(userToLogin);
+	};
+
+	const logout = () => {
+		setUser(null);
+	};
+
+	const auth = {
+		user,
+		login,
+		logout,
+	};
+
 	return (
-		<div className="App">
-			<Router>
-				<Switch>
-					<Route path="/" exact>
-						<Home/>
-					</Route>
-					<Route path="/Collections" exact>
-						<Collections/>
-					</Route>
-					<Route path="/Landmarks" exact>
-						<Landmarks/>
-					</Route>
-				</Switch>
-			</Router>	
-		</div>
-
-
+		<AuthContext.Provider value={auth}>
+      <div className="App">
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route path="/" exact>
+              <Home/>
+            </Route>
+            <Route path="/Collections" exact>
+              <Collections/>
+            </Route>
+            <Route path="/Landmarks" exact>
+              <Landmarks/>
+            </Route>
+            <Route path="/login" exact>
+              <Login />
+            </Route>
+            <Route path="/register" exact>
+              <Register />
+            </Route>
+            <Route path="/testmap" exact>
+              <DisplayMap />
+            </Route>
+          </Switch>
+        </Router>	
+      </div>
+    </AuthContext.Provider>
 	);
 }
-
-
 
 export default App;
