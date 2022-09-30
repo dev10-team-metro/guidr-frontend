@@ -3,7 +3,7 @@ import mapboxgl from 'mapbox-gl';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
-function DisplayMap() {
+export default function MapDisplay() {
 	const mapContainer = useRef(null);
 	const map = useRef(null);
 
@@ -31,5 +31,3 @@ function DisplayMap() {
 		</>
 	);
 }
-
-export default DisplayMap;

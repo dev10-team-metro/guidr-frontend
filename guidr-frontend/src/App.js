@@ -4,7 +4,7 @@ import jwt_decode from 'jwt-decode';
 import Register from './components/Forms/Register';
 import NavBar from './components/NavBar';
 import Login from './components/Forms/Login';
-import DisplayMap from './components/Map';
+import MapDisplay from './components/MapDisplay';
 import AuthContext from './AuthContext';
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
 						<Register />
 					</Route>
 					<Route path="/testmap">
-						<DisplayMap />
+						<MapDisplay />
 					</Route>
 				</Switch>
 			</Router>
