@@ -1,0 +1,9 @@
+.background {
+    background-image: url("https://static0.thetravelimages.com/wordpress/wp-content/uploads/2018/06/thumb_92294_cover_header-2.jpeg");
+    background-color: #ecd5d5;
+   }
+
+.background {
+    height: 100vh;
+    width: 100vw;
+  }
