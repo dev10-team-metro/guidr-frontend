@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
+import Collections from './components/Collections';
+import Home from './components/Home';
+import Landmarks from './components/Landmarks';
 import Register from './components/Forms/Register';
 import NavBar from './components/NavBar';
 import Login from './components/Forms/Login';
@@ -38,20 +41,31 @@ function App() {
 
 	return (
 		<AuthContext.Provider value={auth}>
-			<Router>
-				<NavBar />
-				<Switch>
-					<Route path="/login">
-						<Login />
-					</Route>
-					<Route path="/register">
-						<Register />
-					</Route>
-					<Route path="/testmap">
-						<MapDisplay />
-					</Route>
-				</Switch>
-			</Router>
+			<div className="App">
+				<Router>
+					<NavBar />
+					<Switch>
+						<Route path="/" exact>
+							<Home />
+						</Route>
+						<Route path="/Collections" exact>
+							<Collections />
+						</Route>
+						<Route path="/Landmarks" exact>
+							<Landmarks />
+						</Route>
+						<Route path="/login" exact>
+							<Login />
+						</Route>
+						<Route path="/register" exact>
+							<Register />
+						</Route>
+						<Route path="/testmap" exact>
+							<MapDisplay />
+						</Route>
+					</Switch>
+				</Router>
+			</div>
 		</AuthContext.Provider>
 	);
 }
