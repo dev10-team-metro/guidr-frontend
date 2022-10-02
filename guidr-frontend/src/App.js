@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
-import Collections from "./components/Collections";
 import Home from "./components/Home";
 import Landmarks from "./components/Landmarks";
 import Register from './components/Forms/Register';
@@ -9,6 +8,7 @@ import NavBar from './components/NavBar';
 import Login from './components/Forms/Login';
 import DisplayMap from './components/Map';
 import AuthContext from './AuthContext';
+import CollectionsPage from './components/CollectionsPage';
 
 function App() {
 	const [user, setUser] = useState(null);
@@ -48,8 +48,8 @@ function App() {
             <Route path="/" exact>
               <Home/>
             </Route>
-            <Route path="/Collections" exact>
-              <Collections/>
+            <Route path="/CollectionsPage" exact>
+              <CollectionsPage/>
             </Route>
             <Route path="/Landmarks" exact>
               <Landmarks/>

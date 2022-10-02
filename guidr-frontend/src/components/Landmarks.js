@@ -1,50 +1,75 @@
+import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
-import stonestreet from "./pics/stonestreet.jpg"
-import bowling from "./pics/bowlinggreen.jpg"
 import Facts from "./Facts"
-
+import "../css/Facts.css"
+import bridge1 from "../components/pics/bridge-1.jpg"
+import centralpark1 from "../components/pics/centralpark-1.jpg"
+import empirestate1 from "../components/pics/empirestate-1.jpg"
+import statueofliberty1 from "../components/pics/statueofliberty-1.jpg"
+import timessquare1 from "../components/pics/timessquare-1.jpg"
 
 function Landmarks() {
+    const [landmarks, setLandmarks] = useState([0]);
+    const [currentLandmark, setCurrentLandmark] = useState("");
+    const [backgroundImages, setBackgroundImages] = useState([centralpark1,empirestate1,statueofliberty1,bridge1,timessquare1])
+    const [backgroundImage, setBackgroundImage] = useState(backgroundImages[0])
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+
+    useEffect(() => {
+        fetch("http://localhost:8080/api/guidr/landmark")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                setLandmarks(data)
+                console.log(data[0])
+                setCurrentLandmark(data[0])
+            })
+            .catch(console.log)
+    }, [])
+
+    function handleBackgroundNext(){
+        let index = currentIndex
+        if(index + 1 < 5){
+            setCurrentIndex(index + 1)
+            setBackgroundImage(backgroundImages[index + 1])
+        } else {
+            setCurrentIndex(0)
+            setBackgroundImage(backgroundImages[0])
+        }
+    }
+
+    function handleBackgroundPrevious(){
+        let index = currentIndex
+        if(index - 1 >= 0){
+            setCurrentIndex(index - 1)
+            setBackgroundImage(backgroundImages[index - 1])
+        } else {
+            setCurrentIndex(4)
+            setBackgroundImage(backgroundImages[4])
+        }
+    }
+
+
+
+
     return (
-        <><Facts/>
-            <div data-uk-slideshow="animation: push">
-                <div className="uk-position-relative uk-visible-toggle uk-light" tabindex="0">
-
+        <>
+        <Facts landmark={currentLandmark}/>
+            <div data-uk-slideshow="animation: push" className="landmarkshow">
+                <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="0" uk-slideshow="max-height: 833;">
                     <ul className="uk-slideshow-items">
-                        <li data-uk-slideshow-item="0">
-                            <img src={stonestreet} alt="Stone Street #1" data-uk-cover/>
-                            
-{/* 
-                            <div data-uk-slideshow="animation: push">
-                            <div className="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-position-relative uk-visible-toggle" tabIndex="0">
-                                <ul className="uk-slideshow-items">
-                                    <li data-uk-slideshow-item="0">
-                                        <h1 class="uk-card-title">Fun Fact</h1>
-                                        <p>Fun fact will be pulled from backend to here.</p>
-                                    </li>
-                                    <li data-uk-slideshow-item="1">
-                                        <h1 class="uk-card-title">Fun Fact</h1>
-                                        <p>Fun fact example 2.</p>
-                                    </li>
-                                </ul>
-                                <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-previous data-uk-slideshow-item="previous"></a>
-                                <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-next data-uk-slideshow-item="next"></a>
-                            </div>
-                            <ul className="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-                            </div> */}
-
+                        {landmarks.map(landmark => (
+                            <li data-uk-slideshow-item={landmark.landmarkId - 1}>
+                            <img src={backgroundImage} alt={landmark.name} data-uk-cover/>
                         </li>
-                        
-                        <li data-uk-slideshow-item="1">
-                            <img src={bowling} alt="Slide 2" data-uk-cover/>
-                        </li>
-                        <li data-uk-slideshow-item="2">
-                            <img src={stonestreet} alt="Stone Street #2" data-uk-cover/>
-                        </li>
+                        ))}
                     </ul>
 
-                    <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-previous data-uk-slideshow-item="previous"></a>
-                    <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-next data-uk-slideshow-item="next"></a>
+                    <a className="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large" href="#" data-uk-slidenav-previous data-uk-slideshow-item="previous" 
+                    onClick={handleBackgroundPrevious}></a>
+                    <a className="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large" href="#" data-uk-slidenav-next data-uk-slideshow-item="next" 
+                    onClick={handleBackgroundNext}></a>
 
                 </div>
 
