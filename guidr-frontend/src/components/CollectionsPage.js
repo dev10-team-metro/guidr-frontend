@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './CollectionsPage.css';
 
 function CollectionsPage(){
@@ -49,6 +49,6 @@ function CollectionsPage(){
 
 		</React.Fragment>
     )
-
-    
 }
+
+export default CollectionsPage
