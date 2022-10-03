@@ -3,11 +3,12 @@ import "../css/Facts.css"
 
 function Facts({landmark}) {
     const [facts, setFacts] = useState([0])
+
     useEffect(() => {
         setFacts(landmark["facts"])
     })
 
-console.log(landmark["facts"])
+
     return (
         <>
         <div data-uk-slideshow="animation: push" className="factslideshow overlay">
@@ -17,6 +18,7 @@ console.log(landmark["facts"])
                     {facts && (
                     facts.map(fact => (
                         <li data-uk-slideshow-item={fact.factId - 1}>
+                            <h1>Fun Facts</h1>
                             {fact.description}
                         </li>
                     )))}
