@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
-import Collections from './components/Collections';
 import Home from './components/Home';
 import Landmarks from './components/Landmarks';
 import Register from './components/Forms/Register';
 import NavBar from './components/NavBar';
 import Login from './components/Forms/Login';
-import MapDisplay from './components/MapDisplay';
 import AuthContext from './AuthContext';
 import CollectionsPage from './components/CollectionsPage';
 import Modal from './components/Modal';
@@ -50,8 +48,8 @@ function App() {
 						<Route path="/" exact>
 							<Home />
 						</Route>
-						<Route path="/Collections" exact>
-							<Collections />
+						<Route path="/CollectionsPage" exact>
+							<CollectionsPage />
 						</Route>
 						<Route path="/Landmarks" exact>
 							<Landmarks />
@@ -63,7 +61,10 @@ function App() {
 							<Register />
 						</Route>
 						<Route path="/testmap" exact>
-							<MapDisplay />
+							<DisplayMap />
+						</Route>
+						<Route path="/collection" exact>
+							<Modal />
 						</Route>
 					</Switch>
 				</Router>
