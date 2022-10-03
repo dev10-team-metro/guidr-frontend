@@ -9,6 +9,7 @@ import Login from './components/Forms/Login';
 import AuthContext from './AuthContext';
 import CollectionsPage from './components/CollectionsPage';
 import Modal from './components/Modal';
+import MapDisplay from './components/MapDisplay';
 
 function App() {
 	const [user, setUser] = useState(null);
@@ -61,7 +62,7 @@ function App() {
 							<Register />
 						</Route>
 						<Route path="/testmap" exact>
-							<DisplayMap />
+							<MapDisplay />
 						</Route>
 						<Route path="/collection" exact>
 							<Modal />

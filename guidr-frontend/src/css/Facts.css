@@ -1,0 +1,32 @@
+.landmarkshow{
+    position: relative;
+}
+
+.factslideshow{
+    width: 550px;
+    height: 480px;
+    position: absolute;
+    right: 200px;
+    top: 200px;
+    
+}
+
+.uk-card{
+    width: 550px;
+    height: 480px;
+    
+}
+
+.overlay{
+    z-index: 1;
+    margin: 30px;
+    
+}
+
+.factslider{
+    color: black;
+}
+
+.factnav{
+    color: black;
+}
