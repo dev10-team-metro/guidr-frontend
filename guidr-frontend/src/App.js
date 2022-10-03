@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Landmarks from './components/Landmarks';
 import Register from './components/Forms/Register';
 import NavBar from './components/NavBar';
+import NotFound from './components/NotFound';
 import Login from './components/Forms/Login';
 import AuthContext from './AuthContext';
 import CollectionsPage from './components/CollectionsPage';
@@ -42,6 +43,7 @@ function App() {
 
 	return (
 		<AuthContext.Provider value={auth}>
+<<<<<<< HEAD
 			<div className="App">
 				<Router>
 					<NavBar />
@@ -71,6 +73,39 @@ function App() {
 				</Router>
 			</div>
 		</AuthContext.Provider>
+=======
+      <div className="App">
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route path="/CollectionsPage" exact>
+              <CollectionsPage/>
+            </Route>
+            <Route path="/Landmarks/:id" exact>
+              <Landmarks/>
+            </Route>
+            <Route path="/login" exact>
+              <Login />
+            </Route>
+            <Route path="/register" exact>
+              <Register />
+            </Route>
+            <Route path="/testmap" exact>
+              <DisplayMap />
+            </Route>
+            <Route path="/" exact>
+              <Home/>
+            </Route>
+            <Route>
+              <NotFound />
+            <Route path="/collection" exact>
+              <Modal/>
+            </Route>
+          </Switch>
+        </Router>	
+      </div>
+    </AuthContext.Provider>
+>>>>>>> origin
 	);
 }
 
