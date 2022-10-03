@@ -16,8 +16,8 @@ function Facts({landmark}) {
             <div className="uk-card uk-card-default uk-card-body uk-position-relative uk-visible-toggle" tabIndex="0">
                 <ul className="uk-slideshow-items">
                     {facts && (
-                    facts.map(fact => (
-                        <li data-uk-slideshow-item={fact.factId - 1}>
+                    facts.map((fact, index) => (
+                        <li data-uk-slideshow-item={index}>
                             <h1>Fun Facts</h1>
                             {fact.description}
                         </li>

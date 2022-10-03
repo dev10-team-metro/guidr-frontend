@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Landmarks from "./components/Landmarks";
 import Register from './components/Forms/Register';
 import NavBar from './components/NavBar';
+import NotFound from './components/NotFound';
 import Login from './components/Forms/Login';
 import DisplayMap from './components/Map';
 import AuthContext from './AuthContext';
@@ -45,13 +46,10 @@ function App() {
         <Router>
           <NavBar />
           <Switch>
-            <Route path="/" exact>
-              <Home/>
-            </Route>
             <Route path="/CollectionsPage" exact>
               <CollectionsPage/>
             </Route>
-            <Route path="/Landmarks" exact>
+            <Route path="/Landmarks/:id" exact>
               <Landmarks/>
             </Route>
             <Route path="/login" exact>
@@ -62,6 +60,12 @@ function App() {
             </Route>
             <Route path="/testmap" exact>
               <DisplayMap />
+            </Route>
+            <Route path="/" exact>
+              <Home/>
+            </Route>
+            <Route>
+              <NotFound />
             </Route>
           </Switch>
         </Router>	
