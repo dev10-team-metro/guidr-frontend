@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CollectionsPage.css';
+import Modal from './Modal';
 
 function CollectionsPage() {
 	const [collections, setCollections] = useState([]);
@@ -14,6 +15,7 @@ function CollectionsPage() {
 
 	return (
 		<React.Fragment>
+			<Modal />
 			<div className="collectionsContainer">
 				<div className="uk-background cover">
 					<div className="top">
@@ -35,12 +37,12 @@ function CollectionsPage() {
 						<div className="collections">
 							<div class="uk-card uk-card-default uk-card-body">
 								Collection 1: <br />
-								<Link
+								<button
 									className="uk-button uk-button-default"
-									to="/collection"
+									data-uk-toggle="target: #modal-full"
 								>
 									Get Started
-								</Link>
+								</button>
 							</div>
 							<div class="uk-card uk-card-default uk-card-body uk-margin-left">
 								Collection 2: <br /> 1800's

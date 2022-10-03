@@ -10,6 +10,7 @@ export default function MapDisplay() {
 	const [lng, setLng] = useState(-70.9);
 	const [lat, setLat] = useState(42.35);
 	const [zoom, setZoom] = useState(9);
+	const [landmarks, setLandmarks] = useState([]);
 
 	useEffect(() => {
 		if (map.current) return;
@@ -20,6 +21,13 @@ export default function MapDisplay() {
 			zoom: zoom,
 		});
 	});
+
+	useEffect(() => {
+		fetch('http://localhost:8080/api/guidr/landmark/1')
+			.then((response) => response.json())
+			.then((data) => setLandmarks(data))
+			.catch(console.log);
+	}, []);
 
 	return (
 		<>
