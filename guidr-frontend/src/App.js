@@ -9,6 +9,7 @@ import Login from './components/Forms/Login';
 import DisplayMap from './components/Map';
 import AuthContext from './AuthContext';
 import CollectionsPage from './components/CollectionsPage';
+import Modal from './components/Modal';
 
 function App() {
 	const [user, setUser] = useState(null);
@@ -62,6 +63,9 @@ function App() {
             </Route>
             <Route path="/testmap" exact>
               <DisplayMap />
+            </Route>
+            <Route path="/collection" exact>
+              <Modal/>
             </Route>
           </Switch>
         </Router>	
