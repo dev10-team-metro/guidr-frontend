@@ -9,6 +9,8 @@ import NavBar from './components/NavBar';
 import Login from './components/Forms/Login';
 import MapDisplay from './components/MapDisplay';
 import AuthContext from './AuthContext';
+import CollectionsPage from './components/CollectionsPage';
+import Modal from './components/Modal';
 
 function App() {
 	const [user, setUser] = useState(null);
