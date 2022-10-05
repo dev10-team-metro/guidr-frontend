@@ -9,8 +9,7 @@ import NotFound from './components/NotFound';
 import Login from './components/Forms/Login';
 import AuthContext from './AuthContext';
 import CollectionsPage from './components/CollectionsPage';
-import Modal from './components/Modal';
-import MapDisplay from './components/MapDisplay';
+import DisplayMap from './components/MapDisplay';
 
 function App() {
 	const [user, setUser] = useState(null);
@@ -43,18 +42,14 @@ function App() {
 
 	return (
 		<AuthContext.Provider value={auth}>
-<<<<<<< HEAD
 			<div className="App">
 				<Router>
 					<NavBar />
 					<Switch>
-						<Route path="/" exact>
-							<Home />
-						</Route>
 						<Route path="/CollectionsPage" exact>
 							<CollectionsPage />
 						</Route>
-						<Route path="/Landmarks" exact>
+						<Route path="/Landmarks/:id" exact>
 							<Landmarks />
 						</Route>
 						<Route path="/login" exact>
@@ -64,48 +59,18 @@ function App() {
 							<Register />
 						</Route>
 						<Route path="/testmap" exact>
-							<MapDisplay />
+							<DisplayMap />
 						</Route>
-						<Route path="/collection" exact>
-							<Modal />
+						<Route path="/" exact>
+							<Home />
+						</Route>
+						<Route>
+							<NotFound />
 						</Route>
 					</Switch>
 				</Router>
 			</div>
 		</AuthContext.Provider>
-=======
-      <div className="App">
-        <Router>
-          <NavBar />
-          <Switch>
-            <Route path="/CollectionsPage" exact>
-              <CollectionsPage/>
-            </Route>
-            <Route path="/Landmarks/:id" exact>
-              <Landmarks/>
-            </Route>
-            <Route path="/login" exact>
-              <Login />
-            </Route>
-            <Route path="/register" exact>
-              <Register />
-            </Route>
-            <Route path="/testmap" exact>
-              <DisplayMap />
-            </Route>
-            <Route path="/" exact>
-              <Home/>
-            </Route>
-            <Route>
-              <NotFound />
-            <Route path="/collection" exact>
-              <Modal/>
-            </Route>
-          </Switch>
-        </Router>	
-      </div>
-    </AuthContext.Provider>
->>>>>>> origin
 	);
 }
 
