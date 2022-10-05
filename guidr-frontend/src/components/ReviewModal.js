@@ -106,7 +106,7 @@ const addReview = () => {
                             <br></br>
                             <div className='modalbuttons'>
                             <Link className="uk-button uk-button-default submit" to="/CollectionsPage">Submit</Link>
-                            <Link className="uk-button uk-button-default cancel">Nevermind</Link>
+                            <Link className="uk-button uk-button-default cancel" to={`/Landmarks/${collection.collectionId}`}>Nevermind</Link>
                             </div>
                         </div>
                     </div>

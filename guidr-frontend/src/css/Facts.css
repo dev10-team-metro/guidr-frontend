@@ -1,5 +1,5 @@
-.landmarkshow{
-    position: relative;
+.landmarkshow {
+	position: relative;
 }
 
 .factslideshow{
@@ -15,16 +15,37 @@
     height: 480px;
 }
 
-.overlay{
-    z-index: 1;
-    margin: 30px;
-    
+.overlay {
+	z-index: 1;
+	margin: 30px;
 }
 
-.factslider{
-    color: black;
+.factslider {
+	color: black;
 }
 
-.factnav{
-    color: black;
+.factnav {
+	color: black;
+}
+
+.mini-map {
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	z-index: 10;
+	bottom: 3rem;
+	left: 1rem;
+	border: 1px solid black;
+}
+
+
+
+.landmarknav > * > * {
+	
+	border: 1px solid white;
+}
+
+.landmarknav > .uk-active > * {
+	background-color: rgba(255, 255, 255, 0.6);
+	
 }

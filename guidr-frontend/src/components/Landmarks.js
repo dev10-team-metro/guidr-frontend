@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom"
 import Facts from "./Facts"
 import "../css/Facts.css"
 import ReviewModal from './ReviewModal';
+import MapDisplay from './MapDisplay';
 
 function Landmarks() {
     const [landmarks, setLandmarks] = useState([0]);
@@ -77,7 +78,9 @@ function Landmarks() {
                         showModal ? <ReviewModal collection = {collection} /> : <></>
                     }
                     
+                    <MapDisplay places={landmarks} isMiniMap={true} />
                     <Facts landmark={currentLandmark} />
+                    
                     <div data-uk-slideshow="animation: push" className="landmarkshow">
                         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="0" uk-slideshow="max-height: 833;">
                             <ul className="uk-slideshow-items">
@@ -94,7 +97,7 @@ function Landmarks() {
                                 onClick={handleNextCurrentLandmark} ></a>
                         </div>
 
-                        <ul className="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                        <ul className="landmarknav uk-slideshow-nav uk-dotnav uk-margin uk-position-bottom-center"></ul>
 
                     </div>
                 </>
@@ -102,8 +105,7 @@ function Landmarks() {
         }
     }
 
-
-    return renderSlideshow()
+	return renderSlideshow();
 }
 
-export default Landmarks
+export default Landmarks;
