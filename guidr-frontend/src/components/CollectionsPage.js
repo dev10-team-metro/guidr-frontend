@@ -1,41 +1,57 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom"
 import './CollectionsPage.css';
 import Modal from './Modal.js'
 
 
 function CollectionsPage() {
 	const [collections, setCollections] = useState([]);
+	const [passCollectionsId, setPassCollectionsId] = useState(0);
+
 
 	useEffect(() => {
-		fetch("http://localhost8080/api/guidr/collection")
+		fetch(`http://localhost:8080/api/guidr/collection`)
 			.then(response => response.json())
-			.then(data => setCollections(data))
+			.then(data => {
+				console.log(data)
+				setCollections(data)
+			})
 			.catch(console.log)
 	}, [])
+
+	const handleSetId = (collectionId)=> {
+		setPassCollectionsId(collectionId);
+	}
 
 	return (
 		<React.Fragment>
 
-			
+			<Modal id={passCollectionsId}/>
 			<div className="collectionsContainer">
 				<div className="uk-background cover">
 					<div className="top">
-						<h1 className="topText">Collections</h1>
-						<div className='description'>
-							<p>Select one of our collections, or search for tours by city.</p>
-						</div>
+							<h2 className='description'>Select one of our collections, or search for tours by city.</h2>
 						<form class="uk-search uk-search-large">
 							<span uk-search-icon></span>
 							<input class="uk-search-input" type="search" placeholder="Search by city..." />
 						</form>
+						<h1 className="topText">Collections</h1>
 						<div className='collections'>
-							<div class="uk-card uk-card-default uk-card-body tour">Collection 1: <br />
-								<Modal/>						
-							</div>
-							<div class="uk-card uk-card-default uk-card-body uk-margin-left tour">Collection 2: <br />
-								<Modal/>
-							 </div>
+							{collections.map(collection => (
+								<div key={collection.id}>
+									<div class="uk-card uk-card-default uk-card-body tour">
+										<h3 className="cardText">{collection.name}</h3>
+									</div>
+									<div>
+										<button className="uk-button uk-button-default previewButton" type="button" onClick={() => handleSetId(collection.collectionId)} data-uk-toggle="target: #modal-full">Preview</button>
+									</div>
+
+								</div>
+							))}
+
+
+
+
+
 						</div>
 					</div>
 
@@ -78,6 +94,11 @@ function CollectionsPage() {
 
 
 	*/}
+
+	{/*state 
+function 
+fedd function
+*/}
 
 
 

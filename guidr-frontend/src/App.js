@@ -67,6 +67,7 @@ function App() {
             </Route>
             <Route>
               <NotFound />
+            </Route>
             <Route path="/collection" exact>
               <Modal/>
             </Route>
