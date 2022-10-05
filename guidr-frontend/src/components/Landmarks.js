@@ -35,7 +35,7 @@ function Landmarks() {
     const handleNextCurrentLandmark = () => {
         let index = currentIndex;
 
-        if(index + 1 === 4){
+        if(index + 1 === landmarks.length - 1){
             setShowModal(true);
         } 
 
