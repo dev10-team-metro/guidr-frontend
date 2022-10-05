@@ -1,12 +1,12 @@
 .background {
-    background-image: url("https://static0.thetravelimages.com/wordpress/wp-content/uploads/2018/06/thumb_92294_cover_header-2.jpeg");
-    background-color: #ecd5d5;
-   }
+	background-image: url('https://static0.thetravelimages.com/wordpress/wp-content/uploads/2018/06/thumb_92294_cover_header-2.jpeg');
+	background-color: #ecd5d5;
+}
 
 .background {
-    height: 100vh;
-    width: 100vw;
-  }
+	height: 100vh;
+	width: 100vw;
+}
 
   .collectionsContainer{
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://imgs.search.brave.com/yC7wD73o_WvYbli7qnNlxdhxZNrd52-RYpjcnrGMmE0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ldmZp/bmVhcnQuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE5LzA3/L0JyeWFuLVRoYXRj/aGVyX0JSVDc3Mjku/anBn");
@@ -16,7 +16,7 @@
 }
 
 .searchBar {
-  color: rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
 }
 
 .topText{
@@ -25,9 +25,9 @@
   font-family:Arial, Helvetica, sans-serif;
 }
 
-.description{
-  color: white;
-  font-family:Arial, Helvetica, sans-serif;
+.description {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .top{
@@ -39,11 +39,10 @@
   height: 75rem;
 }
 
-.topText{
-  color: white;
-  font-family:Arial, Helvetica, sans-serif;
+.topText {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .collections{
   display: flex;
@@ -67,4 +66,3 @@
 .startButton{
   margin-top: 10%;
 }
-

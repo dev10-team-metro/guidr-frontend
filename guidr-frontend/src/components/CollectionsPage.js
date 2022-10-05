@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
 import './CollectionsPage.css';
 import Modal from './Modal.js'
 
@@ -8,26 +8,32 @@ function CollectionsPage() {
 	const [collections, setCollections] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost8080/api/guidr/collection")
-			.then(response => response.json())
-			.then(data => setCollections(data))
-			.catch(console.log)
-	}, [])
+		fetch('http://localhost8080/api/guidr/collection')
+			.then((response) => response.json())
+			.then((data) => setCollections(data))
+			.catch(console.log);
+	}, []);
 
 	return (
 		<React.Fragment>
-
-			
+			<Modal />
 			<div className="collectionsContainer">
 				<div className="uk-background cover">
 					<div className="top">
 						<h1 className="topText">Collections</h1>
-						<div className='description'>
-							<p>Select one of our collections, or search for tours by city.</p>
+						<div className="description">
+							<p>
+								Select one of our collections, or search for
+								tours by city.
+							</p>
 						</div>
 						<form class="uk-search uk-search-large">
 							<span uk-search-icon></span>
-							<input class="uk-search-input" type="search" placeholder="Search by city..." />
+							<input
+								class="uk-search-input"
+								type="search"
+								placeholder="Search by city..."
+							/>
 						</form>
 						<div className='collections'>
 							<div class="uk-card uk-card-default uk-card-body tour">Collection 1: <br />
@@ -38,13 +44,8 @@ function CollectionsPage() {
 							 </div>
 						</div>
 					</div>
-
-
 				</div>
-
 			</div>
-
-
 
 			{/*}
 			<div class="uk container uk-container-expand uk-margin-top uk-margin-large-bottom">
@@ -78,11 +79,8 @@ function CollectionsPage() {
 
 
 	*/}
-
-
-
 		</React.Fragment>
-	)
+	);
 }
 
-export default CollectionsPage
+export default CollectionsPage;
