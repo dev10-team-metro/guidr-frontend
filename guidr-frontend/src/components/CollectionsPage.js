@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './CollectionsPage.css';
 import Modal from './Modal.js'
 
@@ -9,6 +10,7 @@ function CollectionsPage() {
 
 
 	useEffect(() => {
+
 		fetch(`http://localhost:8080/api/guidr/collection`)
 			.then(response => response.json())
 			.then(data => {
@@ -18,6 +20,7 @@ function CollectionsPage() {
 			.catch(console.log)
 	}, [])
 
+
 	const handleSetId = (collectionId)=> {
 		setPassCollectionsId(collectionId);
 	}
@@ -25,14 +28,20 @@ function CollectionsPage() {
 	return (
 		<React.Fragment>
 
+
 			<Modal id={passCollectionsId}/>
 			<div className="collectionsContainer">
 				<div className="uk-background cover">
 					<div className="top">
 							<h2 className='description'>Select one of our collections, or search for tours by city.</h2>
+
 						<form class="uk-search uk-search-large">
 							<span uk-search-icon></span>
-							<input class="uk-search-input" type="search" placeholder="Search by city..." />
+							<input
+								class="uk-search-input"
+								type="search"
+								placeholder="Search by city..."
+							/>
 						</form>
 						<h1 className="topText">Collections</h1>
 						<div className='collections'>
@@ -54,13 +63,8 @@ function CollectionsPage() {
 
 						</div>
 					</div>
-
-
 				</div>
-
 			</div>
-
-
 
 			{/*}
 			<div class="uk container uk-container-expand uk-margin-top uk-margin-large-bottom">
@@ -95,15 +99,12 @@ function CollectionsPage() {
 
 	*/}
 
-	{/*state 
-function 
-fedd function
-*/}
+
 
 
 
 		</React.Fragment>
-	)
+	);
 }
 
-export default CollectionsPage
+export default CollectionsPage;

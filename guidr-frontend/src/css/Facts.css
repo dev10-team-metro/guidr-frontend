@@ -1,32 +1,53 @@
-.landmarkshow{
-    position: relative;
+.landmarkshow {
+	position: relative;
 }
 
-.factslideshow{
-    width: 550px;
-    height: 480px;
-    position: absolute;
-    right: 200px;
-    top: 200px;
-    
+.factslideshow {
+	width: 550px;
+	height: 480px;
+	position: absolute;
+	right: 200px;
+	top: 200px;
 }
 
-.uk-card{
-    width: 550px;
-    height: 480px;
-    
+.uk-card {
+	width: 550px;
+	height: 480px;
 }
 
-.overlay{
-    z-index: 1;
-    margin: 30px;
-    
+.overlay {
+	z-index: 1;
+	margin: 30px;
 }
 
-.factslider{
-    color: black;
+.factslider {
+	color: black;
 }
 
-.factnav{
-    color: black;
+.factnav {
+	color: black;
+}
+
+.mini-map {
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	z-index: 10;
+	bottom: 3rem;
+	left: 1rem;
+	border: 1px solid black;
+}
+
+/* .landmarknav > * > * {
+	background: rgba(255, 255, 255, 0.1);
+} */
+
+.landmarknav > * > * {
+	/* background: rgba(255, 255, 255, 1); */
+	border: 1px solid white;
+}
+
+.landmarknav > .uk-active > * {
+	background-color: rgba(255, 255, 255, 0.6);
+	/* border: 1px solid white; */
 }
