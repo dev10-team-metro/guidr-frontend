@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CollectionsPage.css';
-import Modal from './Modal';
+import Modal from './Modal.js'
+
 
 function CollectionsPage() {
 	const [collections, setCollections] = useState([]);
@@ -34,19 +35,13 @@ function CollectionsPage() {
 								placeholder="Search by city..."
 							/>
 						</form>
-						<div className="collections">
-							<div class="uk-card uk-card-default uk-card-body">
-								Collection 1: <br />
-								<button
-									className="uk-button uk-button-default"
-									data-uk-toggle="target: #modal-full"
-								>
-									Get Started
-								</button>
+						<div className='collections'>
+							<div class="uk-card uk-card-default uk-card-body tour">Collection 1: <br />
+								<Modal/>						
 							</div>
-							<div class="uk-card uk-card-default uk-card-body uk-margin-left">
-								Collection 2: <br /> 1800's
-							</div>
+							<div class="uk-card uk-card-default uk-card-body uk-margin-left tour">Collection 2: <br />
+								<Modal/>
+							 </div>
 						</div>
 					</div>
 				</div>
