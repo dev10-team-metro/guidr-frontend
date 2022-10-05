@@ -42,6 +42,7 @@ function App() {
 
 	return (
 		<AuthContext.Provider value={auth}>
+
 			<div className="App">
 				<Router>
 					<NavBar />
@@ -71,6 +72,7 @@ function App() {
 				</Router>
 			</div>
 		</AuthContext.Provider>
+
 	);
 }
 
