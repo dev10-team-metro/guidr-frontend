@@ -80,10 +80,10 @@ export default function MapDisplay({ places, isMiniMap }) {
 			<GoogleMap
 				ref={mapRef}
 				mapContainerStyle={mapContainerStyle}
-				zoom={12}
-				center={markers[0]}
+				zoom={13}
+				center={markers[2]}
 				options={mapOptions}
-				onLoad={onMapLoad}
+				// onLoad={onMapLoad}
 			>
 				{markers.length > 0 &&
 					markers.map((marker, index) => (

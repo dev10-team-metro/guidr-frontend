@@ -23,27 +23,24 @@ function Facts({ landmark }) {
 						<ul className="uk-slideshow-items">
 							{facts &&
 								facts.map((fact, index) => (
-									<li
-										data-uk-slideshow-item={index}
-										key={index}
-									>
-										<h1>Fun Facts</h1>
-										{fact.description}
+									<li data-uk-slideshow-item={index}>
+										<h1>{landmark.name}</h1>
+										<p>{fact.description}</p>
 									</li>
 								))}
 						</ul>
-						<button
+						<a
 							className="uk-position-center-left uk-position-small uk-hidden-hover factslider"
 							href="#"
 							data-uk-slidenav-previous
 							data-uk-slideshow-item="previous"
-						></button>
-						<button
+						></a>
+						<a
 							className="uk-position-center-right uk-position-small uk-hidden-hover factslider"
 							href="#"
 							data-uk-slidenav-next
 							data-uk-slideshow-item="next"
-						></button>
+						></a>
 
 						<div>
 							<ul className="uk-slideshow-nav uk-dotnav uk-position-bottom-center uk-margin factnav"></ul>

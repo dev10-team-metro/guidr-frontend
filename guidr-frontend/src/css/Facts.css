@@ -10,6 +10,10 @@
 	top: 200px;
 }
 
+.factslideshow ul li p {
+	padding: 0 20px;
+}
+
 .uk-card {
 	width: 580px;
 	height: 300px;
@@ -29,11 +33,11 @@
 }
 
 .mini-map {
-	width: 450px;
-	height: 450px;
+	width: 525px;
+	height: 525px;
 	position: absolute;
 	z-index: 10;
-	bottom: 18rem;
+	top: 11rem;
 	left: 8rem;
 	border: 1px solid black;
 }

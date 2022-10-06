@@ -85,7 +85,7 @@ function Landmarks() {
 						className="landmarkshow"
 					>
 						<div
-							className="uk-position-relative uk-visible-toggle uk-light"
+							className="uk-position-relative uk-visible-toggle uk-dark"
 							tabIndex="0"
 							uk-slideshow="max-height: 833;"
 						>
@@ -106,14 +106,14 @@ function Landmarks() {
 							</ul>
 
 							<button
-								className="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large"
+								className="uk-position-center-left uk-position-small uk-slidenav-large"
 								href="#"
 								data-uk-slidenav-previous
 								data-uk-slideshow-item="previous"
 								onClick={handlePreviousCurrentLandmark}
 							></button>
 							<button
-								className="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large"
+								className="uk-position-center-right uk-position-small uk-slidenav-large uk-animation-shake"
 								href="#"
 								data-uk-slidenav-next
 								data-uk-slideshow-item="next"
