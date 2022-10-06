@@ -63,8 +63,8 @@ function Modal({ id }) {
                                     
                                     
                                     <div className='previewbuttons'>
-                                    <Link className="uk-button uk-button-default begin" to={`/Landmarks/${collection.collectionId}`}>Begin the tour</Link>
-                                    <Link className="uk-button uk-button-default goback" to="/CollectionsPage">Go back</Link>
+                                    <Link className="uk-button uk-button-primary begin" to={`/Landmarks/${collection.collectionId}`}>Begin the tour</Link>
+                                    <Link className="uk-button uk-button-danger goback" to="/CollectionsPage">Go back</Link>
                                 </div>
                                 </>
 

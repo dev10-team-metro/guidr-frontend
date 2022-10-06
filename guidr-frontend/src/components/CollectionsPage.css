@@ -1,15 +1,10 @@
 .background {
-	background-image: url('https://static0.thetravelimages.com/wordpress/wp-content/uploads/2018/06/thumb_92294_cover_header-2.jpeg');
-	background-color: #ecd5d5;
-}
-
-.background {
 	height: 100vh;
 	width: 100vw;
 }
 
   .collectionsContainer{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://imgs.search.brave.com/yC7wD73o_WvYbli7qnNlxdhxZNrd52-RYpjcnrGMmE0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ldmZp/bmVhcnQuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE5LzA3/L0JyeWFuLVRoYXRj/aGVyX0JSVDc3Mjku/anBn");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../components/pics/collectionbackground.jpg');
     width: 100vw;
     height: 70rem;
     background-size: cover;
@@ -41,24 +36,47 @@
   height: 75rem;
 }
 
-.topText {
-	color: rgb(255, 255, 255);
-	font-family: Arial, Helvetica, sans-serif;
- 
+
+.topText h1 {
+  text-align:center; font-size:50px; text-transform:uppercase; color:rgb(255, 255, 255); letter-spacing:1px;
+  font-weight:400;
 }
+.topText h1 span {
+  margin-top: 5px;
+    font-size:15px; color:rgb(241, 238, 238); word-spacing:1px; font-weight:normal; letter-spacing:2px;
+    text-transform: uppercase; font-weight:500;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.topText h1 span:after,.topText h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+  background-color:#f8f8f8;
+}
+
+
+
 
 
 h3:after,h3:before {
   content: " ";
   display: block;
-  border-bottom: 3px solid #000000;
+  border-bottom: 3px solid #ffffff;
 }
 
 
 .collections{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
   width: 100%;
@@ -73,9 +91,8 @@ h3:after,h3:before {
 .tour{
   height: 15rem;
   width: 15rem;
-  margin-left: 5rem;
-  background-image: url("https://imgs.search.brave.com/Tw7xZg6cVTKLflEhZuwZitqAQ_d5LDfAKXP2UQqNjHo/rs:fit:195:195:1/g:ce/aHR0cHM6Ly9kMXlq/am5weDBwNTNzOC5j/bG91ZGZyb250Lm5l/dC9zdHlsZXMvbG9n/by10aHVtYm5haWwv/czMvMDQyMDE4L3Vu/dGl0bGVkLTJfMjc5/LnBuZz9DXzRkRTdU/TXA4akVoWFA1TVdR/OGNteGI2UURPZUll/byZpdG9rPU5GMU9H/VkpY");
-  background-size: cover;
+  margin: 0;
+
 }
 
 .startButton{
@@ -84,34 +101,23 @@ h3:after,h3:before {
 
 
 .previewButton{
-  margin-left: 9rem;
-  margin-top: 1rem;
-  background-color: #575757;
+  margin-left: 4em;
+  margin-top: 12rem;
+  /* background-color: #865555; */
   color: rgb(255, 255, 255);
 }
 
 
-.cardText{
-  color: rgb(0, 0, 0);
-  font-family:Arial, Helvetica, sans-serif;
-  display: block;
-  color: rgb(0, 0, 0);
+.cardTitle{
+  color: rgb(243, 243, 243);
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.7);
+  /* margin-left: 3rem; */
+  width: 17rem;
 }
 
-.headingCollection{
-  margin-bottom: -2rem;
+.cardTitle h3 {
+  color: white;
+
 }
 
 
-.searchBar{
-  background: rgba(255, 255, 255, 0.5);
-  
-}
-
-.collectionName{
-  margin-right: -5rem;
-  flex-wrap: wrap;
-  text-align: left;
-}
