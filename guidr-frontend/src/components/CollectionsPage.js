@@ -32,7 +32,6 @@ function CollectionsPage() {
 			<div className="collectionsContainer">
 				<div className="uk-background cover">
 					<div className="top">
-							<h1 className='description'>Select one of our collections, or search for tours by city.</h1>
 {/*}
 						<form class="uk-search uk-search-large searchBar">
 							<span uk-search-icon></span>
@@ -43,22 +42,27 @@ function CollectionsPage() {
 							/>
 						</form>
 	*/}
-						<h2 className="topText">Collections</h2>
+
+						<div className='topText'>
+							<h1>Collections<span>Select a tour!</span></h1>
+							
+						</div>
+						
 						
 						<div className='collections'>
 							{collections.map(collection => (
-								<div key={collection.id} >
+								<div key={collection.id} className="uk-flex-center uk-flex-middle">
 									
+									<div className="cardTitle"><h3>{collection.name}</h3></div>
 									
-									<div class="uk-card uk-card-small uk-card-default tour">
-									<h3  className="cardText">{collection.name}</h3>
-										
+
+									<div class="uk-card uk-card-small uk-card-default tour" style={{ 
+										background : `url(${collection.landmarks[0].image})`,
+										backgroundSize: "cover"
+									}}>
+										<button className="uk-button uk-button-default previewButton" type="button" onClick={() => handleSetId(collection.collectionId)} data-uk-toggle="target: #modal-full">Preview</button>
 									</div>
-									<button className="uk-button uk-button-default previewButton" type="button" onClick={() => handleSetId(collection.collectionId)} data-uk-toggle="target: #modal-full">Preview</button>
-									<div>
 									
-										
-									</div>
 
 								</div>
 							))}
