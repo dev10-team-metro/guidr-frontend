@@ -4,7 +4,7 @@ The frontend for Team Metro's Capstone Project `Guidr`.
 
 ## Link to Git Hub Project Planning
 
-
+https://github.com/orgs/dev10-team-metro/projects/2
 
 ## Link to Wireframes
 
