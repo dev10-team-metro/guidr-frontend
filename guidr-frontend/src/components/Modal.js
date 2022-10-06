@@ -39,6 +39,7 @@ function Modal({ id }) {
                     <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" data-uk-grid>
                         <div class="uk-padding-large">
                             <div>
+
                                 <>
                                     <h1>{collection.name}</h1>
                                     <p>{collection.description}</p>
@@ -66,6 +67,7 @@ function Modal({ id }) {
                                     <Link className="uk-button uk-button-default goback" to="/CollectionsPage">Go back</Link>
                                 </div>
                                 </>
+
                             </div>
                         </div>
                         {collection === undefined ? <></> : (<div>
