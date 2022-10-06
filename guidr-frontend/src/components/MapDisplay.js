@@ -59,7 +59,7 @@ export default function MapDisplay({ places, isMiniMap }) {
 	useEffect(() => {
 		let newMarkers;
 
-		if (places.length > 0) {
+		if (places && places.length > 0) {
 			newMarkers = places.map((place) => ({
 				lat:
 					place.address !== undefined ? place.address.latitude : null,
@@ -76,7 +76,7 @@ export default function MapDisplay({ places, isMiniMap }) {
 	if (!isLoaded) return 'Loading';
 
 	return (
-		<div className={isMiniMap ? 'mini-map' : ''}>
+		<div className={isMiniMap ? 'mini-map' : 'modal-map'}>
 			<GoogleMap
 				ref={mapRef}
 				mapContainerStyle={mapContainerStyle}

@@ -3,16 +3,16 @@
 }
 
 .factslideshow{
-    width: 550px;
-    height: 480px;
+    width: 580px;
+    height: 300px;
     position: absolute;
     right: 200px;
     top: 200px;
 }
 
 .uk-card{
-    width: 550px;
-    height: 480px;
+    width: 580px;
+    height: 300px;
 }
 
 .overlay {
@@ -29,12 +29,12 @@
 }
 
 .mini-map {
-	width: 250px;
-	height: 250px;
+	width: 450px;
+	height: 450px;
 	position: absolute;
 	z-index: 10;
-	bottom: 3rem;
-	left: 1rem;
+	bottom: 18rem;
+	left: 8rem;
 	border: 1px solid black;
 }
 
