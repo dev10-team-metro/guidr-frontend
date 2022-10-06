@@ -6,9 +6,8 @@ The frontend for Team Metro's Capstone Project `Guidr`.
 
 https://github.com/orgs/dev10-team-metro/projects/2
 
-## Link to Wireframes
+## Wireframes
 
-	![alt text](guidrcollectionspage.jpg)
 
 ## Link to Presentation
 
