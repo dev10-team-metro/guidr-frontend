@@ -11,7 +11,7 @@ function Facts({landmark}) {
 
     return (
         <>
-        <div data-uk-slideshow="animation: push" className="factslideshow overlay">
+        <div data-uk-slideshow="animation: fade" className="factslideshow overlay">
             <div className="uk-position-relative">
             <div className="uk-card uk-card-default uk-card-body uk-position-relative uk-visible-toggle" tabIndex="0">
                 <ul className="uk-slideshow-items">
