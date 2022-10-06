@@ -45,7 +45,7 @@ function Login() {
 			.then((data) => {
 				if (data) {
 					auth.login(data.jwt_token);
-					history.push('/collections');
+					history.push('/collectionsPage');
 				} else {
 					setErrors([
 						'Login Failed. Invalid Username and/or Password',

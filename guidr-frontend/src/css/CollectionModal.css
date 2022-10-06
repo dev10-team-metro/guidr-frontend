@@ -51,6 +51,12 @@ button {
     font-size: 30px;
     
   }
+
+  .star :hover{
+    color: #000;
+  }
+
+
   .on {
     color: #000;
   }

@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../AuthContext';
+import GuidrLogo2 from '../components/pics/GuidrLogo2.PNG'
+import "../css/Navbar.css"
 
 function Navbar() {
 	const auth = useContext(AuthContext);
@@ -9,8 +11,8 @@ function Navbar() {
 		<div className="uk-navbar-container">
 			<nav className="uk-navbar">
 				<div className="uk-navbar-left uk-margin-medium-left">
-					<Link className="uk-navbar-item uk-logo" to="/">
-						<h1>Guidr</h1>
+					<Link className="uk-navbar-item uk-logo guidrlogo" to="/">
+						<img src={GuidrLogo2}></img>
 					</Link>
 				</div>
 				<div
