@@ -9,6 +9,8 @@ function Facts({landmark}) {
     })
 
 
+
+
     return (
         <>
         <div data-uk-slideshow="animation: fade" className="factslideshow overlay">
@@ -18,7 +20,7 @@ function Facts({landmark}) {
                     {facts && (
                     facts.map((fact, index) => (
                         <li data-uk-slideshow-item={index}>
-                            <h1>Fun Facts</h1>
+                            <h1>{landmark.name}</h1>
                             {fact.description}
                         </li>
                     )))}
