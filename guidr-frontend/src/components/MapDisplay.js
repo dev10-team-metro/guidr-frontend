@@ -81,7 +81,8 @@ export default function MapDisplay({ places, isMiniMap }) {
 				ref={mapRef}
 				mapContainerStyle={mapContainerStyle}
 				zoom={13}
-				center={markers[2]}
+				center={{ lat: 40.743118, lng: -73.9917 }}
+				// center={markers[0]}
 				options={mapOptions}
 				// onLoad={onMapLoad}
 			>

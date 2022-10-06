@@ -44,8 +44,8 @@
 		opacity: 0;
 	}
 }
-
-/* @keyframes fade {
+/* 
+@keyframes fade {
 	0%,
 	100% {
 		opacity: 0;

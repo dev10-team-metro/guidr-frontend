@@ -96,6 +96,7 @@ function Home() {
 				style={{
 					background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${currentBg}) no-repeat`,
 					'background-size': 'cover',
+					// animation: 'fade 3s',
 				}}
 			>
 				<div className="uk-background-cover">
