@@ -33,18 +33,18 @@ function Modal({id}) {
                     <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
                         <div class="uk-padding-large">
                             <div>
-                            {collection.map(tour => (
+                            
                                 
                                 <>
-                                <h1>{tour.name}</h1>
-                                <p>{tour.description}</p>
+                                <h1>{collection.name}</h1>
+                                <p>{collection.description}</p>
                                 <br/>
                                 <p></p>
-                                <Link className="uk-button uk-button-primary homebutton" to={`/Landmarks/:${tour.collectionId}`}>Begin the tour</Link>
+                                <Link className="uk-button uk-button-primary homebutton" to={`/Landmarks/${collection.collectionId}`}>Begin the tour</Link>
                                 <Link className="uk-button uk-button-danger homebutton" to="/CollectionsPage">Go back</Link>
                                 </>
                             
-                            ))}
+                            
                             </div>
                             
                         </div>

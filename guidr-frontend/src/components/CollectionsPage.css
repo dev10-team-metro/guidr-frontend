@@ -29,7 +29,7 @@
 .description {
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
-
+  margin-top: 3rem;
 }
 
 .top{
@@ -42,14 +42,23 @@
 }
 
 .topText {
-	color: white;
+	color: rgb(255, 255, 255);
 	font-family: Arial, Helvetica, sans-serif;
+ 
 }
+
+
+h3:after,h3:before {
+  content: " ";
+  display: block;
+  border-bottom: 3px solid #000000;
+}
+
 
 .collections{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 1rem;
   width: 100%;
@@ -58,14 +67,15 @@
 
 .collections{
   margin-bottom: 30rem;
-  margin-left: 5rem;
+  
 }
 
 .tour{
   height: 15rem;
   width: 15rem;
-  margin-right: 5rem;
-  margin-bottom: 3rem;
+  margin-left: 5rem;
+  background-image: url("https://imgs.search.brave.com/Tw7xZg6cVTKLflEhZuwZitqAQ_d5LDfAKXP2UQqNjHo/rs:fit:195:195:1/g:ce/aHR0cHM6Ly9kMXlq/am5weDBwNTNzOC5j/bG91ZGZyb250Lm5l/dC9zdHlsZXMvbG9n/by10aHVtYm5haWwv/czMvMDQyMDE4L3Vu/dGl0bGVkLTJfMjc5/LnBuZz9DXzRkRTdU/TXA4akVoWFA1TVdR/OGNteGI2UURPZUll/byZpdG9rPU5GMU9H/VkpY");
+  background-size: cover;
 }
 
 .startButton{
@@ -74,19 +84,34 @@
 
 
 .previewButton{
-  margin-left: 4rem;
+  margin-left: 9rem;
+  margin-top: 1rem;
+  background-color: #575757;
   color: rgb(255, 255, 255);
 }
 
 
 .cardText{
-  color: rgb(14, 13, 13);
+  color: rgb(0, 0, 0);
   font-family:Arial, Helvetica, sans-serif;
-  padding: 1rem;
-  margin-top: -2rem;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .headingCollection{
   margin-bottom: -2rem;
 }
 
+
+.searchBar{
+  background: rgba(255, 255, 255, 0.5);
+  
+}
+
+.collectionName{
+  margin-right: -5rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
