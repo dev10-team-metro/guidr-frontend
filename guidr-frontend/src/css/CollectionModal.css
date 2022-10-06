@@ -1,76 +1,73 @@
-.modalbox{
-   
+.modalbox {
 }
 
-.title{
-    text-align: center;
+.title {
+	text-align: center;
 }
 
-.ratingtext{
-    text-align: center;
+.ratingtext {
+	text-align: center;
 }
 
-.star-rating{
-    text-align: center;
+.star-rating {
+	text-align: center;
 }
 
-
-.textbox{
-    width: 530px;
-    height: 200px;
-    text-align: left;
-
+.textbox {
+	width: 530px;
+	height: 200px;
+	text-align: left;
 }
 
-.modalbuttons{
-    position: absolute; 
-    bottom: 10px;
-    left: 330px;
-    display: flex;
-    justify-content: space-between;
-    max-width: 260px;
-    margin: 0 auto;
-    
+.modalbuttons {
+	position: absolute;
+	bottom: 10px;
+	left: 330px;
+	display: flex;
+	justify-content: space-between;
+	max-width: 260px;
+	margin: 0 auto;
 }
 
-.submit{
-    color: white;
-    background-color: #000;
+.submit {
+	color: white;
+	background-color: #000;
 }
 
-.cancel{
-    color: white;
-    background-color: #000;
+.cancel {
+	color: white;
+	background-color: #000;
 }
 
 button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 30px;
-    
-  }
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 30px;
+}
 
-  .star :hover{
-    color: #000;
-  }
+.star :hover {
+	color: #000;
+}
 
+.on {
+	color: #000;
+}
+.off {
+	color: #ccc;
+}
 
-  .on {
-    color: #000;
-  }
-  .off {
-    color: #ccc;
-  }
+.endbutton {
+	position: absolute;
+	z-index: 1;
+	right: 10px;
+	bottom: 10px;
+	background-color: #000;
+	color: white;
+}
 
-  .endbutton{
-    position: absolute;
-    z-index: 1;
-    right: 10px;
-    bottom: 10px;
-    background-color: #000;
-    color: white;
-  } 
-
-
+.endbutton:hover {
+	background-color: white;
+	color: #000;
+}

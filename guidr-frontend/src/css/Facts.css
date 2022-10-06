@@ -2,17 +2,21 @@
 	position: relative;
 }
 
-.factslideshow{
-    width: 580px;
-    height: 300px;
-    position: absolute;
-    right: 200px;
-    top: 200px;
+.factslideshow {
+	width: 580px;
+	height: 300px;
+	position: absolute;
+	right: 200px;
+	top: 200px;
 }
 
-.uk-card{
-    width: 580px;
-    height: 300px;
+.factslideshow ul li p {
+	padding: 0 20px;
+}
+
+.uk-card {
+	width: 580px;
+	height: 300px;
 }
 
 .overlay {
@@ -29,23 +33,20 @@
 }
 
 .mini-map {
-	width: 450px;
-	height: 450px;
+	width: 525px;
+	height: 525px;
 	position: absolute;
 	z-index: 10;
-	bottom: 18rem;
+	top: 11rem;
 	left: 8rem;
 	border: 1px solid black;
 }
 
-
-
 .landmarknav > * > * {
-	
+	/* background: rgba(255, 255, 255, 1); */
 	border: 1px solid white;
 }
 
 .landmarknav > .uk-active > * {
 	background-color: rgba(255, 255, 255, 0.6);
-	
 }
